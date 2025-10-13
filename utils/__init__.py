@@ -1,0 +1,1 @@
+from .report_generator import generate_service_pdf
