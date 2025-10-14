@@ -36,7 +36,7 @@ if "intent" not in st.session_state:
 # Sidebar Greeting
 # -----------------------------
 with st.sidebar:
-    st.markdown("### 👋 Welcome, Chirodeep!")
+    st.markdown("### 👋 Welcome!")
     st.markdown("We're here to help you with loans, card issues, and complaints — all in one place.")
     st.button("🎁 View Offers")
 
