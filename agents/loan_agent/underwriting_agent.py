@@ -16,7 +16,7 @@ def handle_underwriting(phone, loan_amount, emi, kyc_passed=True):
     if score < 700:
         return f"Loan rejected: Credit score {score} is below 700."
     elif loan_amount <= pre_limit:
-        return f"Loan approved instantly! Credit Score: {score}"
+        return f"Congratulations! Your Loan has been approved. Credit Score: {score}"
     elif loan_amount <= 2 * pre_limit and emi <= 0.5 * (pre_limit / 12):
         return f"Loan approved after salary verification. Credit Score: {score}."
     else:
