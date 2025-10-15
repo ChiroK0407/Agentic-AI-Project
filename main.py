@@ -105,8 +105,10 @@ if st.session_state.intent == "complaint":
 # Footer Reset Button
 # -----------------------------
 st.divider()
-if st.button("🔄 Reset Conversation"):
-    st.session_state.chat_history = st.session_state.chat_history[:1]
-    st.session_state.triggered_loan_type = None
-    st.session_state.intent = None
-    st.experimental_rerun()
+if st.button("Reset Conversation"):
+    try:
+        for key in st.session_state.keys():
+            del st.session_state[key]
+        st.experimental_rerun()
+    except:
+        st.warning("Unable to reset. Please refresh manually.")
