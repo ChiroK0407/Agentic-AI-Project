@@ -16,7 +16,7 @@ load_dotenv()
 # -----------------------------
 # Global Config
 # -----------------------------
-api_key = os.getenv("GROQ_API_KEY")
+GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 GROQ_URL = "https://api.groq.com/openai/v1/chat/completions"
 
 # -----------------------------
@@ -63,7 +63,7 @@ def query_llama(user_input: str, chat_history: list) -> tuple[str, str | None]:
     }
 
     headers = {
-        "Authorization": f"Bearer {api_key}",
+        "Authorization": f"Bearer {GROQ_API_KEY}",
         "Content-Type": "application/json"
     }
 
