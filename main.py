@@ -107,8 +107,9 @@ if st.session_state.intent == "complaint":
 st.divider()
 if st.button("Reset Conversation"):
     try:
-        for key in st.session_state.keys():
+        keys_to_clear = list(st.session_state.keys())
+        for key in keys_to_clear:
             del st.session_state[key]
         st.experimental_rerun()
-    except:
-        st.warning("Unable to reset. Please refresh manually.")
+    except Exception as e:
+        st.warning(f"Unable to reset. Error: {e}")
