@@ -110,6 +110,6 @@ if st.button("Reset Conversation"):
         keys_to_clear = list(st.session_state.keys())
         for key in keys_to_clear:
             del st.session_state[key]
-        st.experimental_rerun()
+        st.rerun()
     except Exception as e:
         st.warning(f"Unable to reset. Error: {e}")
